@@ -1,7 +1,7 @@
 package com.newsletter.service.impl;
 
-import static com.newsletter.helper.HelperConstants.ON_ERROR;
-import static com.newsletter.helper.HelperConstants.ON_SUCCESS;
+import static com.newsletter.helper.NewsLetterConstants.ON_ERROR;
+import static com.newsletter.helper.NewsLetterConstants.ON_SUCCESS;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

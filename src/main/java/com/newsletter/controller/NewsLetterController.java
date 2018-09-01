@@ -1,7 +1,7 @@
 package com.newsletter.controller;
 
-import static com.newsletter.helper.HelperConstants.ON_FAILURE;
-import static com.newsletter.helper.HelperConstants.ON_SUCCESS;
+import static com.newsletter.helper.NewsLetterConstants.ON_FAILURE;
+import static com.newsletter.helper.NewsLetterConstants.ON_SUCCESS;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
