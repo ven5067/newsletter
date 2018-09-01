@@ -34,8 +34,6 @@ public class NewsLetterServiceImpl implements NewsLetterService {
 
         Mail mail = newsLetter.getMail();
         
-        /* helper.addAttachment("logo.png", new ClassPathResource("nisum-logo.png")); */
-
         Context context = new Context();
         context.setVariables(mail.getModel());
         
