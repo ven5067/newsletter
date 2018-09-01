@@ -42,7 +42,6 @@ public class NewsLetterServiceImpl implements NewsLetterService {
         helper.setTo(mail.getTo());
         helper.setText(html, true);
         helper.setSubject(mail.getSubject());
-        helper.setFrom(mail.getFrom());
 
         emailSender.send(message);
     }
