@@ -2,7 +2,8 @@ package com.newsletter.helper;
 
 public class HelperConstants {
 	
-	public static final String SUCCESS_NEWSLETTER = "Newsletter has been sent successfully";
-	public static final String ERROR_NEWSLETTER = "Error occured while sending newletter";
+	public static final String ON_SUCCESS = "Newsletter has been sent successfully";
+	public static final String ON_ERROR = "Error occured while sending newsletter";
+	public static final String ON_FAILURE = "News letter hasn't been sent";
 	
 }
