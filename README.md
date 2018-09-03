@@ -25,7 +25,7 @@ BIRTHDAY:
 	"mail": {
 		"from": "ven5067@gmail.com",
 		"to": "vmeesala@nisum.com",
-		"subject": "Wishing you a very happy work anniversary!",
+		"subject": "Wishing you a very happy work birthday!",
 		"model": {
 			"name": "Venugopal",
 			"organization": "Nisum Technologies",
