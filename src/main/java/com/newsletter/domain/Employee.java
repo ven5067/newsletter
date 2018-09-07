@@ -20,7 +20,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @Document(collection = "employee")
-@JsonPropertyOrder({ "id", "empId", "firstName", "lastName", "dateOfBirth", "joiningDate", "createdBy", "createdDate",
+@JsonPropertyOrder({ "id", "empId", "firstName", "lastName", "mail", "dateOfBirth", "joiningDate", "createdBy", "createdDate",
 		"lastModifiedBy", "lastModifiedDate" })
 public class Employee extends Audit {
 
@@ -37,6 +37,9 @@ public class Employee extends Audit {
 
 	@Field("lastName")
 	private String lastName;
+	
+	@Field("mail")
+	private String mail;
 
 	@Field("dateOfBirth")
 	@DateTimeFormat(iso = ISO.DATE)
