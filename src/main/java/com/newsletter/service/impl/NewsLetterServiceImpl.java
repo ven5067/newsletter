@@ -57,6 +57,7 @@ public class NewsLetterServiceImpl implements NewsLetterService {
 		setTemplate(context, newsLetter.getType(), helper);
 		helper.setTo(mail.getTo());
 		helper.setSubject(mail.getSubject());
+		helper.setBcc(mail.getFrom());
 
 		return message;
 	}
