@@ -35,7 +35,7 @@ public class NewsLetterController {
 			newsLetterService.sendNewsLetter(newsLetter);
 			return new ResponseEntity<>(ON_SUCCESS, HttpStatus.OK);
 		} catch (Exception e) {
-			return new ResponseEntity<>(ON_FAILURE, HttpStatus.OK);
+			return new ResponseEntity<>(ON_FAILURE, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 }
