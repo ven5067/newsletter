@@ -18,8 +18,8 @@ import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 
 import com.newsletter.domain.NewsLetter;
-import com.newsletter.helper.NewsLetterType;
 import com.newsletter.model.Mail;
+import com.newsletter.model.NewsLetterType;
 import com.newsletter.service.NewsLetterService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +27,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 public class NewsLetterServiceImpl implements NewsLetterService {
+	
+	private static final String BIRTHDAY_TEMPLATE = "birthday-template";
+	private static final String ANNIVERSARY_TEMPLATE = "anniversary-template";
 
 	@Autowired
 	public JavaMailSender emailSender;
@@ -62,16 +65,18 @@ public class NewsLetterServiceImpl implements NewsLetterService {
 		return message;
 	}
 
-	private void setTemplate(Context context, NewsLetterType type, MimeMessageHelper helper)
-			throws MessagingException {
+	private void setTemplate(Context context, NewsLetterType type, MimeMessageHelper helper) throws MessagingException {
 		log.info("Setting template for type :: " + type.name());
 		switch (type) {
 		case BIRTHDAY:
-			helper.setText(templateEngine.process("birthday-template", context), true);
+			helper.setText(templateEngine.process(BIRTHDAY_TEMPLATE, context), true);
 			break;
 
 		case ANNIVERSARY:
-			helper.setText(templateEngine.process("anniversary-template", context), true);
+			helper.setText(templateEngine.process(ANNIVERSARY_TEMPLATE, context), true);
+			break;
+
+		default:
 			break;
 		}
 		log.info("Template has been set for type :: " + type.name());

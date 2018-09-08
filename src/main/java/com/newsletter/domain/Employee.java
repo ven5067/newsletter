@@ -12,7 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.newsletter.helper.TimeZone;
+import com.newsletter.model.TimeZone;
 
 import lombok.Getter;
 import lombok.Setter;

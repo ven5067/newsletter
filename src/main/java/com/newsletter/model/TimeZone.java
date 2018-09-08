@@ -1,4 +1,4 @@
-package com.newsletter.helper;
+package com.newsletter.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +7,5 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum TimeZone {
 	INDIA("Asia/Kolkata");
-
 	private String value;
 }

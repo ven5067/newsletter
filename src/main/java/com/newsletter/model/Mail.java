@@ -5,11 +5,13 @@ import java.util.Map;
 
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 @Getter
+@Builder
 public class Mail {
 
 	@ApiModelProperty(notes = "From address")
