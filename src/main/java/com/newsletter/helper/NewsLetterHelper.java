@@ -13,6 +13,7 @@ public class NewsLetterHelper {
 	private static final String NAME = "name";
 	private static final String ORG = "organization";
 	private static final String MESSAGE = "message";
+	private static final String YEARS = "years";
 
 	private static final String FROM = "ven5067@gmail.com";
 	private static final String ORGANIZATION = "Nisum Technologies";
@@ -30,6 +31,8 @@ public class NewsLetterHelper {
 		model.put(NAME, employee.getFirstName());
 		model.put(ORG, ORGANIZATION);
 		model.put(MESSAGE, ANNIVERSARY_MSG);
+		model.put(MESSAGE, ANNIVERSARY_MSG);
+		model.put(YEARS, 2);
 		return model;
 	}
 }

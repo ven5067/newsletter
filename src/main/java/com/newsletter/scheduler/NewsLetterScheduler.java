@@ -19,8 +19,8 @@ import lombok.extern.log4j.Log4j2;
 @Component
 public class NewsLetterScheduler {
 
-	private static final String EXECUTION_STARTED = "Job Execution Started ::: {}";
-	private static final String EXECUTION_SUCCESS = "Job Execution Completed ::: {}";
+	private static final String EXECUTION_STARTED = "Job execution has started ::: {}";
+	private static final String EXECUTION_SUCCESS = "Job execution has completed ::: {}";
 	private static final String EXECUTION_FAILED = "Job execution has failed for employee {}, {}";
 
 	@Autowired
