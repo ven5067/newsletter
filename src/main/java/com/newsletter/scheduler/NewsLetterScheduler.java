@@ -46,7 +46,7 @@ public class NewsLetterScheduler {
 				birthdayEmployees.add(employee);
 			}
 
-			if (isEquals.test(employee.getJoiningDate())) {
+			if (isEquals.test(employee.getJoiningDate()) && employee.getIsActive()) {
 				anniversaryEmployees.add(employee);
 			}
 		});
