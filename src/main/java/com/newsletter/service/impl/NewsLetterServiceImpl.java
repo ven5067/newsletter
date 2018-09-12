@@ -67,16 +67,9 @@ public class NewsLetterServiceImpl implements NewsLetterService {
 	private void setTemplate(Context context, NewsLetterType type, MimeMessageHelper helper) throws MessagingException {
 		log.info("Setting template for type :: " + type.name());
 		switch (type) {
-		case BIRTHDAY:
-			helper.setText(templateEngine.process(BIRTHDAY_TEMPLATE, context), true);
-			break;
-
-		case ANNIVERSARY:
-			helper.setText(templateEngine.process(ANNIVERSARY_TEMPLATE, context), true);
-			break;
-
-		default:
-			break;
+			case BIRTHDAY: helper.setText(templateEngine.process(BIRTHDAY_TEMPLATE, context), true); break;
+			case ANNIVERSARY: helper.setText(templateEngine.process(ANNIVERSARY_TEMPLATE, context), true); break;
+			default: break;
 		}
 		log.info("Template has been set for type :: " + type.name());
 	}

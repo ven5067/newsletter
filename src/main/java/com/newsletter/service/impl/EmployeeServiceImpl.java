@@ -1,8 +1,7 @@
 package com.newsletter.service.impl;
 
-import static com.newsletter.util.CalandarUtil.calculateAge;
+import static com.newsletter.util.CalandarUtil.calculateYears;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
-	
+
 	@Autowired
 	@Qualifier("sequenceGeneratorImpl")
 	private SequenceGenerator sequenceGenerator;
-	
+
 	@Override
 	public void createEmployee(Employee employee) {
 		employee.setId(sequenceGenerator.getNextSequence("customSequences"));
@@ -51,9 +50,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 		transformEmployee(employee);
 		return employee;
 	}
-	
+
 	private void transformEmployee(Employee employee) {
-		employee.setAge(calculateAge(employee.getDateOfBirth(), LocalDate.now()));
+		employee.setAge(calculateYears.apply(employee.getDateOfBirth()));
 	}
-	
+
 }
