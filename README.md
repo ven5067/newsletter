@@ -6,18 +6,18 @@ Here is the sample payload:
 ANNIVERSARY: 
 
 {
-	"mail": {
-		"from": "ven5067@gmail.com",
-		"to": "vmeesala@nisum.com",
-		"subject": "Wishing you a very happy work anniversary!",
-		"model": {
-			"name": "Venugopal",
-			"organization": "Nisum Technologies",
-			"message": "Thank you for choosing us among a wide range of companies. We appriciate your trust and support. Your honest feedbacks help us improve and get better for you. Without you we would not be there where we are now. I wish you success."
-		}
-	},
-	"type": "ANNIVERSARY",
-	"years": 2
+  "mail": {
+    "from": "ven5067@gmail.com",
+    "to": "vmeesala@nisum.com",
+    "subject": "Wishing you a very happy work anniversary!",
+    "model": {
+      "name": "Venugopal",
+      "organization": "Nisum Technologies",
+      "message": "Thank you for choosing us among a wide range of companies. We appriciate your trust and support. Your honest feedbacks help us improve and get better for you. Without you we would not be there where we are now. I wish you success.",
+      "years": 2
+    }
+  },
+  "type": "ANNIVERSARY"
 }
 
 BIRTHDAY:
